@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Día 1 - Escuelita Bíblica de Vacaciones</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #FFEFD5; /* Fondo durazno claro */
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background-color: #FF6347; /* Rojo tomate */
+      color: white;
+      padding: 20px;
+      border-bottom: 5px solid #FF4500; /* Rojo anaranjado */
+    }
+    header img {
+      width: 100px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 3em;
+    }
+    section {
+      background-color: #FFD700; /* Amarillo */
+      border: 3px dashed #FF4500; /* Rojo anaranjado */
+      border-radius: 15px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 600px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    section:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    h2 {
+      font-size: 2.5em;
+      color: #FF4500;
+    }
+    button {
+      padding: 15px 30px;
+      background-color: #32CD32; /* Verde lima */
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.5em;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    button:hover {
+      background-color: #228B22; /* Verde bosque */
+      transform: scale(1.1);
+    }
+    #countdown {
+      font-size: 2em;
+      margin-top: 20px;
+      color: #FF6347; /* Rojo tomate */
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img id="churchLogo" src="logo.png" alt="Logo de la Iglesia">
+  <h1>Día 1 - Escuelita Bíblica de Vacaciones</h1>
+</header>
+
+<section>
+  <h2>Detalles del Día 1</h2>
+  <p id="dayText">Texto inicial para el día 1.</p>
+  <div id="countdown">Tiempo restante: 00:00:00</div>
+  <button onclick="location.href='index.html'">Volver</button>
+</section>
+
+<script>
+  // Establece la fecha y hora a la que se va a cambiar el texto (ejemplo: 2024-12-31 23:59:59)
+  const targetDate = new Date('2024-11-29T12:12:30').getTime();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById('countdown').textContent = `Tiempo restante: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+    if (distance < 0) {
+      clearInterval(countdownInterval);
+      document.getElementById('countdown').textContent = "¡El tiempo ha llegado!";
+      document.getElementById('dayText').textContent = "Texto actualizado para el día 1.";
+    }
+  }
+
+  const countdownInterval = setInterval(updateCountdown, 1000);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escuelita Bíblica de Vacaciones</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #FFEFD5; /* Fondo durazno claro */
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #FF6347; /* Rojo tomate */
+      color: white;
+      text-align: center;
+      padding: 20px;
+      border-bottom: 5px solid #FF4500; /* Rojo anaranjado */
+    }
+    header img {
+      width: 100px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 3em;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #FFD700; /* Amarillo */
+      padding: 10px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    nav a {
+      text-decoration: none;
+      color: #FF6347; /* Rojo tomate */
+      padding: 10px 20px;
+      margin: 0 10px;
+      background-color: white;
+      border-radius: 5px;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    nav a:hover {
+      background-color: #FF4500;
+      color: white;
+      transform: scale(1.1);
+    }
+    main {
+      padding: 20px;
+    }
+    section {
+      background-color: #FFD700; /* Amarillo */
+      border: 3px dashed #FF4500; /* Rojo anaranjado */
+      border-radius: 15px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 600px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    section:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    section h2 {
+      font-size: 2.5em;
+      color: #FF4500;
+    }
+    button {
+      padding: 15px 30px;
+      background-color: #32CD32; /* Verde lima */
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.5em;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    button:hover {
+      background-color: #228B22; /* Verde bosque */
+      transform: scale(1.1);
+    }
+    #timer {
+      font-size: 2em;
+      margin-top: 10px;
+      color: #FF6347; /* Rojo tomate */
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img id="churchLogo" src="Logo2.png" alt="Logo de la Iglesia">
+  <h1>Escuelita Bíblica de Vacaciones</h1>
+</header>
+
+<nav>
+  <a href="#dia1">Día 1</a>
+  <a href="#dia2">Día 2</a>
+  <a href="#dia3">Día 3</a>
+  <a href="#dia4">Día 4</a>
+  <a href="#dia5">Día 5</a>
+</nav>
+
+<main>
+  <section id="dia1">
+    <h2>Día 1</h2>
+    <p>Introducción al día 1.</p>
+    <button onclick="location.href='dia1.html'">Ver Más</button>
+  </section>
+
+  <section id="dia2">
+    <h2>Día 2</h2>
+    <p>Introducción al día 2.</p>
+    <button onclick="location.href='dia2.html'">Ver Más</button>
+  </section>
+
+  <section id="dia3">
+    <h2>Día 3</h2>
+    <p>Introducción al día 3.</p>
+    <button onclick="location.href='dia3.html'">Ver Más</button>
+  </section>
+
+  <section id="dia4">
+    <h2>Día 4</h2>
+    <p>Introducción al día 4.</p>
+    <button onclick="location.href='dia4.html'">Ver Más</button>
+  </section>
+
+  <section id="dia5">
+    <h2>Día 5</h2>
+    <p>Introducción al día 5.</p>
+    <button onclick="location.href='dia5.html'">Ver Más</button>
+  </section>
+</main>
+
+</body>
+</html>
+
+
